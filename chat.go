@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 
-	pusher "github.com/pusher/pusher-http-go"
+	"github.com/pusher/pusher-http-go"
 )
 
 var client = pusher.Client{
