@@ -18,6 +18,8 @@
 
     var publicChannel = pusher.subscribe('update');
 
+    var menu = false;
+
     const chatBody = $(document)
     const chatRoomsList = $('#rooms')
     const chatReplyMessage = $('#replyMessage')
@@ -108,6 +110,15 @@
             }
 
             evt.preventDefault()
+        },
+
+        toggleMenu: () => {
+            console.log("Toggle")
+            
+            chatBody.find('nav.sidebar').toggleClass('d-none')
+            chatBody.find('nav > a.toggle > i').text() == 'menu' ? 
+                chatBody.find('nav > a.toggle > i').text('arrow_back') : 
+                chatBody.find('nav > a.toggle > i').text('menu')
         }
     }
 
@@ -130,4 +141,5 @@
     chatReplyMessage.on('submit', helpers.replyMessage)
     chatRoomsList.on('click', 'li', helpers.loadChatRoom)
     chatBody.find('#loginScreenForm').on('submit', helpers.LogIntoChatSession)
+    chatBody.find('a.toggle').on('click', helpers.toggleMenu)
 }());

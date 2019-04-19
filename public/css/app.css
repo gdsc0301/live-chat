@@ -11,6 +11,23 @@ h1 {
     max-width: 80%;
     margin: 0 auto;
 }
+a.toggle {
+
+}
+i.material-icons {
+    margin: auto 0;
+    float: left;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+i.material-icons::after {
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
+i.material-icons::before {
+    transition-duration: 2s;
+    transition-timing-function: ease;
+}
 .sidebar {
     position: fixed;
     top: 51px;
