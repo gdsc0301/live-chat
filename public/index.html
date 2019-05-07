@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Chat with friends in realtime</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/app.css" >
 </head>
 <body>
@@ -25,7 +25,7 @@
                 </ul>
             </nav>
             <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" id="registerScreen">
-                <h3 style="text-align: center">Type in your details to chat</h3>
+                <h3 style="text-align: center">Digite seus dados.</h3>
                 <hr/>
                 <div class="chat" style="margin-bottom:150px">
                     <p>&nbsp;</p>
@@ -36,14 +36,14 @@
                         <div class="form-group">
                           <input type="email" class="form-control" id="email" placeholder="Email Address" required>
                         </div>
-                        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-block btn-primary">Log-in</button>
                       </form>
                   </div>
             </main>
 
             <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="display: none" id="main">
                 <h1>Chats</h1>
-                <p>👈 Select a chat to load the messages</p>
+                <p>👈 Escolha uma sala para entrar!</p>
                 <p>&nbsp;</p>
                 <div class="chat" style="margin-bottom:150px">
                     <h5 id="room-title"></h5>
@@ -51,7 +51,7 @@
                     <div class="response">
                         <form id="replyMessage">
                             <div class="form-group">
-                                <input type="text" placeholder="Enter Message" class="form-control" name="message" />
+                                <input type="text" placeholder="Digite sua mensagem..." class="form-control" name="message" />
                             </div>
                         </form>
                     </div>
@@ -65,11 +65,11 @@
         </div>
     </div>
 
-    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script src="./js/pusher.min.js"></script>
+    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/axios.min.js"></script>
     <script type="text/javascript" src="./js/app.js"></script>
   </body>
 </html>

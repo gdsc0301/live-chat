@@ -1,4 +1,3 @@
-// File: ./chat.go
 package main
 
 import (
@@ -58,5 +57,5 @@ func main() {
 	http.HandleFunc("/new/user", registerNewUser)
 	http.HandleFunc("/pusher/auth", pusherAuth)
 
-	log.Fatal(http.ListenAndServe(":8090", nil))
+	log.Fatal(http.ListenAndServe(":8091", nil))
 }

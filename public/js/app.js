@@ -100,6 +100,12 @@
                     chatBody.find('#registerScreen').css("display", "none");
                     chatBody.find('#main').css("display", "block");
 
+                    console.log("RES:");
+                    console.log(res);
+
+                    console.log("CHAT: ");
+                    console.log(chat);
+
                     chat.myChannel = pusher.subscribe('private-' + res.data.email)
                     chat.myChannel.bind('client-' + chat.email, data => {
                         helpers.displayChatMessage(data)
@@ -109,6 +115,7 @@
                 alert('Enter a valid name and email.')
             }
 
+            helpers.toggleMenu()
             evt.preventDefault()
         },
 
