@@ -145,6 +145,24 @@
         }
     })
 
+    /*publicChannel.bind('user-out', function(data) {
+        if (data.email != chat.email){
+            chat.subscribedChannels.forEach(function () {
+                pusher.unsubscribe("")
+            })
+            chat.subscribedChannels.push(pusher.subscribe('private-' + data.email));
+            chat.subscribedUsers.push(data);
+
+            $('#rooms').html("");
+
+            chat.subscribedUsers.forEach((user, index) => {
+                $('#rooms').append(
+                    `<li class="nav-item"><a data-room-id="${user.email}" data-user-name="${user.name}" data-channel-id="${index}" class="nav-link" href="#">${user.name}</a></li>`
+                )
+            })
+        }
+    })*/
+
     chatReplyMessage.on('submit', helpers.replyMessage)
     chatRoomsList.on('click', 'li', helpers.loadChatRoom)
     chatBody.find('#loginScreenForm').on('submit', helpers.LogIntoChatSession)

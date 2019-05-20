@@ -41,6 +41,24 @@ func registerNewUser(rw http.ResponseWriter, req *http.Request) {
 	json.NewEncoder(rw).Encode(newUser)
 }
 
+func userOut(rw http.ResponseWriter, req *http.Request) {
+	body, err := ioutil.ReadAll(req.Body)
+	if err != nil {
+		panic(err)
+	}
+
+	var userGone user
+
+	err = json.Unmarshal(body, &userGone)
+	if err != nil {
+		panic(err)
+	}
+
+	client.Trigger("update", "user-out", userGone)
+
+	json.NewEncoder(rw).Encode(userGone)
+}
+
 func pusherAuth(res http.ResponseWriter, req *http.Request) {
 	params, _ := ioutil.ReadAll(req.Body)
 	response, err := client.AuthenticatePrivateChannel(params)
